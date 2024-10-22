@@ -3,4 +3,9 @@ project(lab4 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(lab4 main.c)
+add_executable(lab4 main.c
+        include/arrays.h
+        src/arrays.c
+        include/io.h
+        src/io.c)
+target_link_libraries(lab4 m)
