@@ -20,7 +20,7 @@ int main(void) {
         reverse ? bubbleSortReverse(arr, size) : bubbleSort(arr, size);
         printArray("\nSorted Array", arr, size);
 
-        printf("\nPrint \'r\' to restart ");
+        printf("\n\033[32mPrint \'r\' to restart\033[0m ");
     }while (getchar() == 'r');
     return 0;
 }

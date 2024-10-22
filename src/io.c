@@ -9,12 +9,12 @@ void getArraySizeFromUser(int *size) {
         isValid = scanf("%d", &*size);
         while (getchar() != '\n');
         if (!isValid) {
-            printf("\nPlease, try again!");
+            printf("\n\033[31mPlease, try again!\033[0m");
             continue;
         }
         if (*size < 2 || *size > 10000) {
             isValid = 0;
-            printf("\nPlease, enter a valid array length");
+            printf("\n\033[31mPlease, enter a valid array length\033[0m");
         }
     } while (!isValid);
 }
@@ -25,11 +25,11 @@ void getArrayFillTypeFromUser(int *choice) {
         isValid = scanf("%d", &*choice);
         while (getchar() != '\n');
         if (!isValid) {
-            printf("\nPlease, try again!");
+            printf("\n\033[31mPlease, try again!\033[0m");
             continue;
         }
         if(*choice != 1 && *choice != 2) {
-            printf("\nEnter 1 or 2!");
+            printf("\n\033[31mEnter 1 or 2!\033[0m");
             isValid = 0;
         }
     } while (!isValid);
@@ -42,11 +42,11 @@ void getArrayFromUser(float *array, int size) {
             isValid = scanf("%f", &array[i]);
             while (getchar() != '\n');
             if(!isValid) {
-                printf("\nPlease, try again!");
+                printf("\n\033[31mPlease, try again!\033[0m");
             }
             if(array[i] < -10000 || array[i] > 10000) {
                 isValid = 0;
-                printf("\nPlease, try again!");
+                printf("\n\033[31mPlease, try again!\033[0m");
             }
         }while (!isValid);
     }
@@ -54,11 +54,15 @@ void getArrayFromUser(float *array, int size) {
 void getSortTypeFromUser(int *choice) {
     char isValid = 0;
     do {
-        printf("Enter a sort type(0 - defalut 1 - reversed): ");
+        printf("\nEnter a sort type(0 - defalut 1 - reversed): ");
         isValid = scanf("%d", &*choice);
         while (getchar() != '\n');
+        if(!isValid) {
+            printf("\n\033[31mPlease, try again!\033[0m");
+        }
         if(*choice != 0 && *choice != 1) {
-            printf("Enter 0 or 1!");
+            printf("\n\033[31mEnter 0 or 1!\033[0m");
+            isValid = 0;
         }
     }while(!isValid);
 }
