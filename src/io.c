@@ -4,6 +4,7 @@
 
 void getArraySizeFromUser(int *size) {
     char isValid = 0;
+    printf("\nThis is program, that sorts arrays using bubble sort");
     do {
         printf("\nPlease, enter a array length in range[2, 10000]: ");
         isValid = scanf("%d", &*size);
