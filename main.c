@@ -9,6 +9,7 @@ int main(void) {
     int size = 0;
     int choice = 0;
     int reverse = 0;
+    printf("\nThis is program, that sorts arrays using bubble sort");
     do {
         getArraySizeFromUser(&size);
         float arr[size] = {};
